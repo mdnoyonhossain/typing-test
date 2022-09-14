@@ -40,11 +40,11 @@ const typeController = (e) => {
   userText += newLetter;
 
   const newLetterCorrect = validate(newLetter);
-
   if (newLetterCorrect) {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
   } else {
-    display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
+    // console.log(display ? errorCount++: "incress"); Very Hard error.............
+    display.innerHTML += `<span class="red">${errorCount++ === " " ? "▪" : newLetter}</span>`;
   }
 
   // check if given question text is equal to user typed text
@@ -76,7 +76,6 @@ const gameOver = () => {
   display.innerHTML = "";
   // make it inactive
   display.classList.add("inactive");
-  
   // show result
   resultModal.innerHTML += `
     <h1>Finished!</h1>
@@ -134,7 +133,7 @@ displayHistory();
 setInterval(() => {
   const currentTime = new Date().getTime();
   const timeSpent = (currentTime - startTime) / 1000;
-  
+
 
   document.getElementById("show-time").innerHTML = `${startTime ? parseInt(timeSpent) : 0} seconds`;
 }, 1000);
