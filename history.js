@@ -35,6 +35,7 @@ function displayHistory() {
     <p>You made <span class="bold red">${test.errorCount}</span> mistakes</p>
   `;
 
+
     histories.appendChild(newRow);
   });
 }
