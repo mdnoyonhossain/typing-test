@@ -11,25 +11,6 @@ body {
   font-family: "Zilla Slab", serif;
 }
 
-header {
-  text-align: center;
-  margin-top: 13px;
-}
-
-.nav {
-  color: white;
-  text-decoration: none;
-  font-size: 21px;
-  background: tomato;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.nav:hover {
-  background-color: black;
-  color: white;
-  border: 1px solid salmon;
-}
 
 .box-container {
   width: 70%;
@@ -176,6 +157,23 @@ button {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+.grid-container {
+  display: grid;
+  grid-template-columns: 200px 2fr;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.nav-item:hover{
+  background-color: #2D2D2D;
+  border-radius: 10px;
+}
 
 .card {
   width: 100%;
@@ -193,7 +191,7 @@ button {
       rgba(255, 255, 255, 0.05) 99.85%);
   backdrop-filter: blur(5px);
   margin-bottom: 30px;
-}
+} 
 
 #modal-background {
   background: rgb(255, 255, 255);
